@@ -39,3 +39,16 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   items.forEach(function (el) { io.observe(el); });
 })();
+
+// Testimonials carousel buttons
+(function () {
+  var track = document.getElementById('quotes-track');
+  if (!track) return;
+  document.querySelectorAll('.carousel__nav [data-dir]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = track.querySelector('.quote');
+      var step = card ? card.getBoundingClientRect().width + 16 : track.clientWidth;
+      track.scrollBy({ left: step * Number(b.dataset.dir), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+  });
+})();
