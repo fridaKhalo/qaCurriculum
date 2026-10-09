@@ -316,3 +316,4 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .carousel__nav { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
 @media (max-width: 900px) { .carousel__track { grid-auto-columns: calc((100% - 16px) / 2); } }
 @media (max-width: 600px) { .carousel__track { grid-auto-columns: 88%; } .quote-featured { padding: 28px; } }
+.quote-featured figcaption img.avatar--lg { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; }
